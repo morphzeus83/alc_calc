@@ -1,5 +1,16 @@
-Groesse = int(input("Wie groß bist du in cm? ")) # User input hight
-Gewicht = int(input("Wie viel kg wiegst du? ")) # User input weight
+while True:
+    try:
+        Groesse = int(input("Wie groß bist du in cm? ")) # User input hight
+        break
+    except ValueError:
+        print("Oops! Du hast etwas falsches eingeben. Versuch es noch einmal. ")
+while True:
+    try:
+        Gewicht = int(input("Wie viel kg wiegst du? ")) # User input weight
+        break
+    except ValueError:
+        print("Oops! Du hast etwas falsches eingeben. Versuch es noch einmal. ")
+
 
 # Factor of alcohol reduction per hour
 wr = 0.31223 - 0.006446 * Gewicht + 0.004466 * Groesse
@@ -16,9 +27,19 @@ while True:
 
 # Definition weight of alcohol per ml
 Alkohol_gewicht = 0.8
+while True:
+    try:
+        Bier_menge = int(input("Bitte die Biermenge in ml eingeben: ")) # User input amount of beer in ml
+        break
+    except ValueError:
+        print("Oops! Du hast etwas falsches eingeben. Versuch es noch einmal. ")
 
-Bier_menge = int(input("Bitte die Biermenge in ml eingeben: ")) # User input amount of beer in ml
-Trink_zeit = int(input("Bitte die Trinkzeit in vollen Stunden angeben: ")) # User input time amount of drinking
+while True:
+    try:
+        Trink_zeit = int(input("Bitte die Trinkzeit in vollen Stunden angeben: ")) # User input time amount of drinking
+        break
+    except ValueError:
+        print("Oops! Du hast etwas falsches eingeben. Versuch es noch einmal. ")
 
 # Calculation of alcohol amount in ml
 Bier_alk = Bier_menge * 0.05
@@ -43,4 +64,4 @@ if Promille >= 0.3:
 else:
     print("Du darfst noch fahren, solltest aber nichts mehr trinken!")
     
-print("Du hast noch", Promille, "Promille im Blut")
+print("Du hast noch " + "%.2f " % Promille + "Promille im Blut")
