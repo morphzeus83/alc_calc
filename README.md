@@ -16,6 +16,7 @@ Please feel free to contribute if you want and read the section **Contribution**
 
 * Flexible per mille threshold value by user definition
 * Create a GUI
+* Create selector for other liqueur
 
 ### Contribution guidelines ###
 
